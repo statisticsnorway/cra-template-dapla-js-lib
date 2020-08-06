@@ -1,0 +1,10 @@
+/coverage
+/src
+/public
+/.idea
+azure-pipelines.yml
+babel.config.js
+rollup.config.js
+sonar-project.properties
+.env
+*.tgz

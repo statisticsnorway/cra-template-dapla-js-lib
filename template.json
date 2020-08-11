@@ -38,7 +38,8 @@
         "!src/index.js",
         "!src/**/index.js",
         "!src/configurations/**",
-        "!src/enums/**"
+        "!src/enums/**",
+        "!src/__tests__/test-data/**"
       ],
       "coverageThreshold": {
         "global": {

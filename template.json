@@ -1,0 +1,56 @@
+{
+  "package": {
+    "description": "",
+    "main": "lib/bundle.js",
+    "author": "Statistics Norway",
+    "license": "Apache-2.0",
+    "licenses": [
+      {
+        "type": "Apache-2.0",
+        "url": "http://www.apache.org/licenses/LICENSE-2.0"
+      }
+    ],
+    "dependencies": {
+      "@babel/core": "^7.10.5",
+      "@babel/preset-env": "^7.10.4",
+      "@babel/preset-react": "^7.10.4",
+      "@rollup/plugin-babel": "^5.1.0",
+      "@rollup/plugin-commonjs": "^14.0.0",
+      "@rollup/plugin-node-resolve": "^8.4.0",
+      "@testing-library/jest-dom": "^5.0.0",
+      "@testing-library/react": "^10.0.0",
+      "@testing-library/user-event": "^12.0.0",
+      "babel-jest": "^26.1.0",
+      "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+      "rollup": "^2.23.0",
+      "rollup-plugin-terser": "^6.1.0",
+      "semantic-ui-css": "^2.4.0",
+      "semantic-ui-react": "^1.0.0"
+    },
+    "scripts": {
+      "build:lib": "rollup --config",
+      "coverage": "react-scripts test --coverage --watchAll=false"
+    },
+    "jest": {
+      "collectCoverageFrom": [
+        "src/**",
+        "!src/main.js",
+        "!src/index.js",
+        "!src/**/index.js",
+        "!src/configurations/**",
+        "!src/enums/**"
+      ],
+      "coverageThreshold": {
+        "global": {
+          "branches": 75,
+          "functions": 75,
+          "lines": 75,
+          "statements": 75
+        }
+      }
+    },
+    "directories": {
+      "lib": "lib"
+    }
+  }
+}

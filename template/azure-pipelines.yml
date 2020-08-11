@@ -1,0 +1,36 @@
+name: $(Build.SourceBranch)-$(date:yyyyMMdd)$(rev:.r)
+
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+  - job: pullRequest
+    displayName: 'Run tests and build'
+    condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
+    steps:
+      - script: |
+          yarn
+          CI=true yarn coverage
+          CI=true yarn build
+  - job: mergeToMaster
+    displayName: 'Analyze code and build'
+    condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+    steps:
+      - script: |
+          yarn
+          CI=true yarn coverage
+          CI=true yarn build
+      - task: SonarQubePrepare@4
+        inputs:
+          SonarQube: 'bipSonarQube'
+          scannerMode: 'CLI'
+          configMode: 'manual'
+          cliProjectKey: '$(Build.DefinitionName)'
+          cliProjectName: '$(Build.Repository.Name)'
+          cliSources: '.'
+      - task: SonarQubeAnalyze@4

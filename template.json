@@ -1,5 +1,9 @@
 {
   "package": {
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
     "description": "",
     "main": "lib/bundle.js",
     "author": "Statistics Norway",

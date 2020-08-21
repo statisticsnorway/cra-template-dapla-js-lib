@@ -24,6 +24,11 @@ jobs:
       - script: |
           yarn
           CI=true yarn coverage
+      - task: PublishCodeCoverageResults@1
+        inputs:
+          codeCoverageTool: Cobertura
+          summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*coverage.xml'
+          reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
       - task: SonarQubePrepare@4
         inputs:
           SonarQube: 'bipSonarQube'

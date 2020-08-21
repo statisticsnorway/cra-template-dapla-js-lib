@@ -10,21 +10,20 @@ pool:
 
 jobs:
   - job: pullRequest
-    displayName: 'Run tests and build'
+    displayName: 'Run tests and build library'
     condition: and(succeeded(), eq(variables['Build.Reason'], 'PullRequest'))
     steps:
       - script: |
           yarn
           CI=true yarn coverage
-          CI=true yarn build
+          CI=true yarn package
   - job: mergeToMaster
-    displayName: 'Analyze code and build'
+    displayName: 'Analyze code'
     condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
     steps:
       - script: |
           yarn
           CI=true yarn coverage
-          CI=true yarn build
       - task: SonarQubePrepare@4
         inputs:
           SonarQube: 'bipSonarQube'
@@ -34,3 +33,4 @@ jobs:
           cliProjectName: '$(Build.Repository.Name)'
           cliSources: '.'
       - task: SonarQubeAnalyze@4
+      - task: SonarQubePublish@4

@@ -1,9 +1,9 @@
 # cra-template-dapla-js-lib
 
-This little template repository works as a cra-template when creating new JavaScript libraries. Basing a new project on 
-a cra-template can be quite powerful and lets you skip the boring part of first time setup. Following the official 
-documentation on [templates for React](https://create-react-app.dev/docs/custom-templates/), this template offers a 
-good start for any JavaScript Library built for Statistics Norway Dataplatform (Dapla).
+This little template repository can be used as a cra-template when creating new JavaScript libraries. Basing a new 
+project on a cra-template can be quite powerful and lets you skip the boring part of first time setup. Following the 
+official documentation on [templates for React](https://create-react-app.dev/docs/custom-templates/), this template 
+offers a good start for any JavaScript Library built for Statistics Norway Dataplatform (Dapla).
 
 ## How to set it up
 ### Locally

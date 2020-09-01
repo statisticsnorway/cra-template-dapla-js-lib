@@ -9,6 +9,6 @@ const setup = () => {
   return { getByText }
 }
 
-test('Renders basics', () => {
+test('Does not crash', () => {
   setup()
 })

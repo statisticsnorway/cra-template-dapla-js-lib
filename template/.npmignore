@@ -10,5 +10,4 @@ nginx.conf
 rollup.config.js
 sonar-project.properties
 .env
-.env.production
 *.tgz

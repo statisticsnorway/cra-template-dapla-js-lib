@@ -9,11 +9,13 @@ offers a good start for any JavaScript Library built for Statistics Norway Datap
 ### Locally
 1. Clone this repository
 2. Create your new library by running 
-`yarn create react-app [lib-name] --scripts-version react-scripts@3.4.0 --template file:[path-to-this-repository]`
+`yarn create react-app [lib-name] --template file:[path-to-this-repository]`
 
 For example, if you want to start a new project called `new-dapla-lib` and you cloned this repository to 
 `C:/code/react-templates/cra-template-dapla-js-lib` the command would be
-`yarn create react-app new-dapla-lib --scripts-version react-scripts@3.4.0 --template file:C:/code/react-templates/cra-template-dapla-js-lib`.
+`yarn create react-app new-dapla-lib --template file:C:/code/react-templates/cra-template-dapla-js-lib`.
+
+After this, run `yarn add --exact react-scripts@3.4.0` in your project.
 
 **Note** on why specifying `react-scripts@3.4.0`. At the moment `3.4.1` introduced a bug that causes coverage reporting 
 after tests in a CI environment to not work, so until that is resolved, we use version `3.4.0`. Issue #8689 and #9322

@@ -57,5 +57,5 @@ So, what does this template actually give you?
     * [React](https://create-react-app.dev/docs/getting-started)
 * Configures Babel and Rollup correctly
 * Sets up CI for JavaScript libraries with Azure Piplines on BIP
-    * Configures SonarQube test coverage reporting
+    * Configures SonarQube
 * Sets up a skeleton for the library and its associated React example application

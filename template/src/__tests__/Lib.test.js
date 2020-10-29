@@ -1,10 +1,10 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import App from '../App'
+import Lib from '../Lib'
 
 const setup = () => {
-  const { getByText } = render(<App />)
+  const { getByText } = render(<Lib />)
 
   return { getByText }
 }

@@ -3,10 +3,9 @@
 /src
 /public
 /.idea
+.DS_Store
 azure-pipelines.yml
 babel.config.js
-Dockerfile
-nginx.conf
 rollup.config.js
 sonar-project.properties
 .env

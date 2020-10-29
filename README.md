@@ -1,9 +1,9 @@
 # cra-template-dapla-js-lib
 
-This little template repository can be used as a cra-template when creating new JavaScript libraries. Basing a new 
-project on a cra-template can be quite powerful and lets you skip the boring part of first time setup. Following the 
-official documentation on [templates for React](https://create-react-app.dev/docs/custom-templates/), this template 
-offers a good start for any JavaScript Library built for Statistics Norway Dataplatform (Dapla).
+This little template repository can be used as a cra-template when creating new JavaScript libraries and/or React 
+components. Basing a new project on a cra-template can be quite powerful and lets you skip the boring part of first 
+time setup. Following the official documentation on [templates for React](https://create-react-app.dev/docs/custom-templates/), 
+this template offers a good start for any JavaScript Library built for Statistics Norway Dataplatform (Dapla).
 
 ## How to set it up
 ### Locally
@@ -12,14 +12,8 @@ offers a good start for any JavaScript Library built for Statistics Norway Datap
 `yarn create react-app [lib-name] --template file:[path-to-this-repository]`
 
 For example, if you want to start a new project called `new-dapla-lib` and you cloned this repository to 
-`C:/code/react-templates/cra-template-dapla-js-lib` the command would be
-`yarn create react-app new-dapla-lib --template file:C:/code/react-templates/cra-template-dapla-js-lib`.
-
-After this, run `yarn add --exact react-scripts@3.4.0` in your project.
-
-**Note** on why specifying `react-scripts@3.4.0`. At the moment `3.4.1` introduced a bug that causes coverage reporting 
-after tests in a CI environment to not work, so until that is resolved, we use version `3.4.0`. Issue #8689 and #9322
-on the GitHub page of create-react-app explains the problem.
+`/Users/me/Projects/react-templates/cra-template-dapla-js-lib` the command would be
+`yarn create react-app new-dapla-lib --template file:/Users/me/Projects/react-templates/cra-template-dapla-js-lib`.
 
 ### From npm
 _Coming soon!_
@@ -34,7 +28,6 @@ and should be added:
 * Link to the repository through `repository`
 * An `author`
 * A `license` where you specify the one from the `licenses` array
-* `main` to point to the bundled version of the library
 * `directories` because they use that in the official documentation
 
 These are all included in the `template.json` file found in this repository but cra-templates for React is not quite
@@ -60,9 +53,9 @@ So, what does this template actually give you?
 * It pre-installs some dependencies, mainly:
     * [Babel](https://github.com/babel/babel)
     * [Rollup](https://github.com/rollup/rollup)
-    * SemanticUI and its [React integration](https://react.semantic-ui.com/)
+    * SemanticUI with its [React integration](https://react.semantic-ui.com/)
     * [React](https://create-react-app.dev/docs/getting-started)
 * Configures Babel and Rollup correctly
-* Sets up CI for JavaScript libraries with Azure Piplines
-    * Configures SonarQube
-* Sets up a skeleton for the library and its associated example application
+* Sets up CI for JavaScript libraries with Azure Piplines on BIP
+    * Configures SonarQube test coverage reporting
+* Sets up a skeleton for the library and its associated React example application

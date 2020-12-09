@@ -5,7 +5,7 @@
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/statisticsnorway/cra-template-dapla-react-app"
+    "url": "https://github.com/statisticsnorway/cra-template-dapla-js-lib"
   },
   "author": "Statistics Norway",
   "license": "Apache-2.0",

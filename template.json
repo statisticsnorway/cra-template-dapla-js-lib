@@ -19,8 +19,8 @@
       "@babel/preset-env": "^7.10.4",
       "@babel/preset-react": "^7.10.4",
       "@rollup/plugin-babel": "^5.1.0",
-      "@rollup/plugin-commonjs": "^16.0.0",
-      "@rollup/plugin-node-resolve": "^10.0.0",
+      "@rollup/plugin-commonjs": "^17.0.0",
+      "@rollup/plugin-node-resolve": "^11.0.0",
       "@testing-library/jest-dom": "^5.0.0",
       "@testing-library/react": "^11.0.0",
       "@testing-library/user-event": "^12.0.0",
@@ -38,11 +38,7 @@
       "collectCoverageFrom": [
         "src/**",
         "!src/main.js",
-        "!src/index.js",
-        "!src/**/index.js",
-        "!src/configurations/**",
-        "!src/enums/**",
-        "!src/__tests__/test-data/**"
+        "!src/index.js"
       ],
       "coverageThreshold": {
         "global": {
